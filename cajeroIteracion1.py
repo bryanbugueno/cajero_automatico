@@ -1,6 +1,5 @@
 import os				#Necesario para limpiar la consola (cls o clear)
 import time				#Necesario para asignar tiempos de esperas
-import datetime			#Necesario para incluir la fecha de la operación
 	
 #Objetos imprimibles
 tarjeta = """
@@ -68,9 +67,11 @@ pantalla_despedida = """
 
 #Variables de control
 accesoAutorizado = False
+operacion = 0
+
+#Credenciales de acceso
 claveValida = 2026
 claveActual = 0000
-operacion = 0
 
 #Variables del cliente
 saldoActual = 500000
@@ -119,8 +120,8 @@ while (True):
 		if (Autentificador() == True):
 			accesoAutorizado = True
 			
-			print("\n MENSAJE: Usuario ha sido validado")
-			print(" MENSAJE: Has iniciado sesión")
+			print("\n MENSAJE: Usuario ha sido validado.")
+			print(" MENSAJE: Has iniciado sesión.")
 			break
 			
 		#Si la clave no es correcta, se reinicia el bucle
@@ -128,7 +129,7 @@ while (True):
 			LimpiarPantalla()
 			print(pantalla_errorPIN)
 			
-			#Muestra el típico mensaje de "clave inválida"
+			print("  AVISO: Sesión Terminada.")
 			volver = input("\n- Presiona ENTER para continuar")
 			LimpiarPantalla()
 	
