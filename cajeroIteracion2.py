@@ -103,9 +103,11 @@ pantalla_girarDinero = """
 
 #Variables de control
 accesoAutorizado = False
+operacion = 0
+
+#Credenciales de acceso
 claveValida = 2026
 claveActual = 0000
-operacion = 0
 
 #Variables del cliente
 saldoActual = 500000
@@ -230,7 +232,7 @@ while (True):
 			LimpiarPantalla()
 			print(pantalla_errorPIN)
 			
-			#Muestra el típico mensaje de "clave inválida"
+			print("  AVISO: Sesión Terminada.")
 			volver = input("\n- Presiona ENTER para continuar")
 			LimpiarPantalla()
 	
@@ -309,4 +311,3 @@ if (accesoAutorizado == True):
 	else:
 		LimpiarPantalla()
 		print(pantalla_despedida);
-
